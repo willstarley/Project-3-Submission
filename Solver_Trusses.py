@@ -76,7 +76,7 @@ def ComputeBucklingLoad(bars):
     for bar in bars:
         E = bar.E
         I = bar.It
-        L = bar.Length()
+        L = bar.Length() * 12
         K = 1.0
         
         Pcr = (np.pi**2 * E * I) / ((K * L)**2)
