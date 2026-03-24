@@ -72,14 +72,11 @@ def ComputeNormalStresses(bars):
         # stress = force / area
         bar.normal_stress = bar.axial_load / bar.A
 
-# compute the critical buckling load of a member
 def ComputeBucklingLoad(bars):
-    # Compute critical buckling load for all bars
-    
     for bar in bars:
         E = bar.E
         I = bar.It
-        L = bar.Length() * 12   # convert ft → inches
+        L = bar.Length()
         K = 1.0
         
         Pcr = (np.pi**2 * E * I) / ((K * L)**2)
