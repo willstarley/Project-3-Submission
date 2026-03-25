@@ -75,7 +75,7 @@ def ComputeNormalStresses(bars):
 def ComputeBucklingLoad(bars):
     for bar in bars:
         E = bar.E
-        I = bar.It
+        I = bar.Iu
         L = bar.Length() * 12
         K = 1.0
         
